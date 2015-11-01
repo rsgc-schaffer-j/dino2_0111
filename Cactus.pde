@@ -1,7 +1,7 @@
 class Cactus {
   float x1;  //x of cactus
   float s1;  //speed of cactus
-  float a1;  //accesloation of cactus
+  float a1;  //acceloration of cactus
   float y1;
   float z1;
 
@@ -23,6 +23,6 @@ class Cactus {
     score=score+10;
     a1=z1;
     z1=z1*1.05 ;
+        }
   }
   }
-}
