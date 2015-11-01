@@ -67,6 +67,20 @@ void draw() {
   textSize(15);
   text("Score: "+score, scorex, scorey);
   
+  if (dino1.isTouching(c11)) {
+    fill(0);
+    textSize(100);
+    text("GAME OVER", 100, 100);
+    fill(0);
+    textSize(15);
+    text("High Score: "+high, 350, 130);
+    text("Score: "+score, 370, 150);
+    text("Press R to restart", 350, 170);
+    scorec=255;
+    t1=255;
+    t2=0;
+    t3=0;
+  } 
 }
 
 void mouseClicked() {
@@ -99,7 +113,10 @@ void mouseClicked() {
   }
 }
 void keyPressed(){  
-  if (dino1.getY() == 140) {
+  
+  if (key == ' '||key == 'w') {
+    if (dino1.getY() == 140) {
     dino1.setA(-2);
   }
+}
 }
