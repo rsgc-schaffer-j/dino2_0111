@@ -59,7 +59,7 @@ float dinor;  //tracks radius of dinosaur
 
     // decide whether dino is touching this cactus
     //            dino radius   cactus radius
-    if ( distance < ((   dinor   +     c.getR() )-20) ) {
+    if ( distance < (   dinor *0.3   +     c.getR()*.2) ) {
       return true;  // exit the method and say "yes" (is touching!) or "true"
     }
    
