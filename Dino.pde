@@ -4,7 +4,6 @@ class Dino {
   float dinos;  //dino speed
   float dinoa;  //dino acceloration
 float dinor;  //tracks radius of dinosaur
-float distance;
   Dino(float dinox_, float dinoy_, float dinos_, float dinoa_) {
     dinox=dinox_;
     dinos=dinos_;
@@ -56,11 +55,11 @@ float distance;
     //        dino - cactus
     float a = dinoy - c.getY();
     float b = dinox - c.getX();
-    distance = sqrt(a*a + b*b);
+    float distance = sqrt(a*a + b*b);
 
     // decide whether dino is touching this cactus
     //            dino radius   cactus radius
-    if ( distance < (   dinor   +     c.getR() ) ) {
+    if ( distance < ((   dinor   +     c.getR() )-20) ) {
       return true;  // exit the method and say "yes" (is touching!) or "true"
     }
    
