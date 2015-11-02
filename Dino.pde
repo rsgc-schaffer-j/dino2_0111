@@ -66,5 +66,4 @@ float dinor;  //tracks radius of dinosaur
     // when dino is not touching, say "no" (not touching) or "false"
     return false;
   }
-  
  }
